@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Oasis - Mascota Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-card">
+        <div class="wave-container">
+            <div class="wave" id="water-wave"></div>
+        </div>
+        
+        <div class="content">
+            <div class="header">
+                <span id="date">Hoy</span>
+                <button class="settings-btn">⚙️</button>
+            </div>
+
+            <div class="pet-zone">
+                <div id="pet-avatar" class="pet-idle">💧</div>
+                <p id="pet-bubble">¡Hola! ¿Bebemos algo?</p>
+            </div>
+
+            <div class="stats">
+                <h1 id="percentage">0%</h1>
+                <p><strong id="current">0</strong> / <span id="goal-text">2000</span> ml</p>
+            </div>
+
+            <div class="actions">
+                <button onclick="drink(250)" class="btn-main"><span>+</span> 250ml</button>
+                <button onclick="drink(500)" class="btn-main"><span>+</span> 500ml</button>
+                <div class="secondary-actions">
+                    <button onclick="resetData()" class="btn-sec">Reiniciar día</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
