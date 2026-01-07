@@ -1,0 +1,109 @@
+:root {
+    --primary: #00b4d8;
+    --bg: #caf0f8;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: 'Inter', -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-card {
+    width: 90%;
+    max-width: 380px;
+    height: 600px;
+    background: var(--white);
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto de Agua */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%; /* Esto subirá con el JS */
+    background: var(--primary);
+    transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wave {
+    position: absolute;
+    top: -20px;
+    width: 200%;
+    height: 20px;
+    background: url('https://svgshare.com/i/xhV.svg'); /* Path de una onda */
+    background-size: 50% 20px;
+    animation: wave-move 3s linear infinite;
+}
+
+@keyframes wave-move {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Interfaz */
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pet-zone {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pet-avatar {
+    font-size: 80px;
+    transition: transform 0.3s;
+}
+
+#pet-bubble {
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-main {
+    background: #03045e;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-sec {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100%;
+    border-radius: 10px;
+    color: #666;
+    font-size: 12px;
+}
